@@ -1,402 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF--8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Retro Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Press+Start+2P&display=swap" rel="stylesheet">
-    <style>
-      /* (c) Layout created by ༺♰༻Clementine༺♰༻ (https://layouts.spacehey.com/layout?id=106610) */
-      
-      /* these are ur color settings */
-      :root {
-        --text: white;
-        --links: rgb(48, 25, 52);
-        --shift: rgb(48, 25, 52);
-        --borders: rgba(48, 25, 52);
-        --background: white;
-        --shadow: rgb(48, 25, 52);
-      }
-      /* this is ur main bg image */
-      body {
-        margin: 1px;
-        background-image: url(https://i.pinimg.com/564x/47/6c/0b/476c0b401012ea57c0fb793b396598db.jpg);
-        background-attachment: fixed;
-        font-weight: bold;
-        padding-top: 30px;
-        padding-bottom: 30px;
-        /* Keep cursor from original implementation */
-        cursor: url('https://content.spacehey.com/cursors/28.gif'), auto;
-        font-family: 'Orbitron', sans-serif;
-        color: white !important;
-        font-size: 90%;
-        text-shadow: 2px 2px 3px #FFFFFF;
-      }
-      a, a:hover, a:visited {
-        cursor: url('https://content.spacehey.com/cursors/28.gif'), auto;
-      }
-      .container {
-        max-width: 960px;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 1rem;
-        box-shadow: 0px 0px 10px var(--shadow);
-        border:  var(--borders) 2px solid;
-        border-radius: 10px;
-      }
-      p {
-        color: var(--text);
-        font-weight: bold;
-      }
-      main p{
-        letter-spacing: 2px;
-        font-weight: 700; 
-        line-height: 1.5;
-        color: white !important;
-        text-shadow: 2px 2px 3px black, 0 0 25px black, 0 0 5px black;
-      }
-      main {
-        background: url(https://i.pinimg.com/564x/b5/6e/b6/b56eb6f5026caa11060548947978595f.jpg) !important;
-        border-top: 0px;
-        border-bottom: 0px;
-        margin-top: 0px;
-        margin-bottom: 0px;
-      }
-      h1, h2, h3, h4, .profile .blurbs .section h4 {
-        font-family: 'Press Start 2P', cursive;
-        font-size: 120%;
-        color: white !important;
-        text-shadow: 2px 2px 3px black, 0 0 25px black, 0 0 5px #FFFFFF;
-      }
-      h1 {
-        color: white;
-      }
-      /* profile pic */
-      .profile-pic img {
-        border: solid var(--borders) 2px;
-        border-radius: 100px;
-        box-shadow: 0px 0px 8px var(--shadow);
-      }
-      .profile-pic img:hover{
-        animation: rotation 0.9s infinite linear;
-      }
-      .online { 
-        content: url(https://i.ibb.co/rZctnwP/onlinebw.gif);
-      }
-      .mood {
-        padding-top: 3px;
-      }
-      .blurbs:after {
-        content: "";
-        white-space: pre-wrap;
-        display: block;
-        height: 30px;
-        background-image: url(https://64.media.tumblr.com/88e3658f27315f077a2c46698e1131af/81b88b2ec67f7892-fd/s400x600/48c8b4296cec9d7115b43ea84c36708ada9758f2.pnj);
-        background-repeat: round, no-repeat;
-        background-size: 240px;
-      }
-      .blurbs .inner {
-        text-align: center !important;
-      }
-      a, .special {
-        color: white !important;
-        text-shadow: none;
-      }
-      a:hover, .special:hover {
-        color: grey !important;
-        text-decoration: none !important;
-        transition: 0.2s;
-      }
-      .blog-preview{
-        text-align: center;
-        border: ridge 3px black;
-        background-image: url(https://i.pinimg.com/564x/8e/6a/dd/8e6add28eceddbbb1a29a1aae1e0cc97.jpg);
-        border-radius: 5px;
-        box-shadow: 0px 2px 2px white;
-        padding: 1rem;
-        margin-top: 1rem;
-      }
-      .friends-space .heading h4{
-        color: white;
-        text-shadow: 0px 2px 2px white;
-      }
-      .friends-space .inner{
-        text-align: center;
-        background-image: url(https://i.pinimg.com/564x/8e/6a/dd/8e6add28eceddbbb1a29a1aae1e0cc97.jpg);
-        border: ridge 3px black;
-        border-radius: 5px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        padding: 1rem;
-      }
-      .friends-space .person p{
-        display: none;
-      }
-      .friends-space .person img:not(.icon){
-        border: ridge 3px white;
-        border-radius: 5px;
-        box-shadow: 0px 2px 2px gray;
-      }
-      .contact-table .contact-icon {
-        width: 24px;
-        height: 24px;
-        margin-right: 1rem;
-      }
-      .blurbs h4 {
-        text-align: center;
-        text-shadow: 0px 2px 2px #301934;
-        color: white;
-      }
-      .person img{ 
-        border: 2px solid var(--borders);
-        box-shadow: 0px 0px 7px var(--shadow);
-        border-radius: 200px;
-        display: inline-block;
-        height: 80px;
-        width: 80px;
-        object-fit: cover;
-      }
-      .person:hover {
-        animation: rotation 0.9s infinite linear;
-      }
-      @keyframes rotation {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(359deg);
-        }
-      }
-      /* Snowflake styles */
-      .snowflake {
-        font-size: 20px;
-        color: #fff;
-      }
-      @-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(1){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(2){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(3){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(4){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(5){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(6){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(7){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(8){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(9){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(10){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.snowflake:nth-of-type(11){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(12){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.1.1/",
-    "react": "https://aistudiocdn.com/react@^19.1.1",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Under Construction</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      background: #0d1117; /* rgb(13,17,23) */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    img.centered {
+      max-width: 100vw;
+      max-height: 100vh;
+      width: auto;
+      height: auto;
+      display: block;
+      cursor: pointer;
+    }
+  </style>
 </head>
-  <body>
-    <!-- Snowflakes -->
-    <div class="snowflakes" aria-hidden="true">
-      <div class="snowflake">🩶</div>
-      <div class="snowflake">🩶</div>
-      <div class="snowflake">🩶</div>
-      <div class="snowflake">🩶</div>
-      <div class="snowflake">🩶</div>
-      <div class="snowflake">🩶</div>
-      <div class="snowflake">🩶</div>
-      <div class="snowflake">🩶</div>
-      <div class="snowflake">🩶</div>
-      <div class="snowflake">🩶</div>
-      <div class="snowflake">🩶</div>
-      <div class="snowflake">🩶</div>
-    </div>
-    
-    <div class="container">
-      
-      <header style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-        <div>
-          <h1>Yakup Ekrem Özcan (a.k.a. rvoidex7)</h1>
-          <p>"Creative Mobile Developer • Arch Linux Enthusiast • Retro & Vaporwave Aesthetics"</p>
-        </div>
-        <iframe
-          width="0"
-          height="0"
-          src="https://www.youtube.com/embed/uJFrI5d0wHg?autoplay=1&loop=1&playlist=uJFrI5d0wHg&controls=1"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          style="border: none; overflow: hidden; position: absolute;"
-        ></iframe>
-      </header>
+<body>
+  <!-- Görsel -->
+  <img class="centered" src="underconstruction.jpg" alt="Under construction" id="constructionImg">
 
-      <div style="display: flex; flex-direction: row; gap: 1rem;">
-        <!-- Left Column -->
-        <div style="width: 33.333333%;">
-          
-          <!-- Profile Component -->
-          <div class="profile-pic" style="background-color: rgba(0,0,0,0.7); text-align: center; padding: 1rem; border: solid 2px rgb(48, 25, 52);">
-            <img
-              src="https://aniyuki.com/wp-content/uploads/2021/12/l-death-note-aniyuki-46.jpg"
-              alt="Profile picture of L Lawliet from Death Note"
-              style="width: 150px; height: 150px; margin: 0 auto; object-fit: cover;"
-            />
-            <p style="margin-top: 1rem; font-weight: bold; font-size: 1.125rem;">Yakup Ekrem Özcan <img src="https://i.ibb.co/rZctnwP/onlinebw.gif" alt="Online Status" class="online" style="display: inline-block;" /></p>
-            <p style="font-size: 0.875rem; color: #ccc;">Computer Engineer / Turkey</p>
-            <p style="font-size: 0.875rem; color: #ccc;">Last Login: 01/01/2024</p>
-            <div class="mood" style="margin-top: 1rem; text-align: left; font-size: 0.875rem;">
-              <p><strong>Status:</strong> Optimize, create, and drift through code.</p>
-              <p><strong>View My:</strong> <a href="#" style="color: #00ffff;">Projects</a> | <a href="#" style="color: #00ffff;">Code</a></p>
-            </div>
-          </div>
-          
-          <!-- ContactTable Component -->
-          <div class="contact-table" style="border: solid 2px rgb(48, 25, 52); margin-top: 1rem; background: rgba(0,0,0,0.7);">
-            <h4 style="padding: 0.5rem; background: rgb(48, 25, 52);">Contacting Me</h4>
-            <div style="padding: 0.75rem;">
-              <div style="display: flex; align-items: center; padding: 0.25rem;">
-                <img src="https://64.media.tumblr.com/2eda27b89aa523112a20120571343753/tumblr_inline_p8s62iBJ5j1r632x0_500.gif" alt="GitHub icon" class="contact-icon" />
-                <a href="https://github.com/rvoidex7" target="_blank" rel="noopener noreferrer" style="color: #00ffff; font-weight: bold;">GitHub</a>
-              </div>
-              <div style="display: flex; align-items: center; padding: 0.25rem;">
-                <img src="https://gifdb.com/images/high/pixel-art-spinning-computer-ouzg3ax1l7w2gtx4.gif" alt="LinkedIn icon" class="contact-icon" />
-                <a href="#" target="_self" rel="noopener noreferrer" style="color: #00ffff; font-weight: bold;">LinkedIn</a>
-              </div>
-              <div style="display: flex; align-items: center; padding: 0.25rem;">
-                <img src="https://www.retrovideogames.net/wp-content/uploads/2021/08/mail-icon.gif" alt="Send Message icon" class="contact-icon" />
-                <a href="#" target="_self" rel="noopener noreferrer" style="color: #00ffff; font-weight: bold;">Send Message</a>
-              </div>
-              <div style="display: flex; align-items: center; padding: 0.25rem;">
-                <img src="https://media.tenor.com/Fw-bUQNpEZ4AAAAi/add-pixel.gif" alt="Add to Friends icon" class="contact-icon" />
-                <a href="#" target="_self" rel="noopener noreferrer" style="color: #00ffff; font-weight: bold;">Add to Friends</a>
-              </div>
-              <div style="display: flex; align-items: center; padding: 0.25rem;">
-                <img src="https://i.gifer.com/origin/d7/d76f8a291244033da78a1a367c76891a_w200.gif" alt="Block User icon" class="contact-icon" />
-                <a href="#" target="_self" rel="noopener noreferrer" style="color: #00ffff; font-weight: bold;">Block User</a>
-              </div>
-            </div>
-          </div>
+  <!-- Ses dosyası -->
+  <audio id="constructionAudio" src="underconstruction.mp3" loop></audio>
 
-        </div>
+  <script>
+    const img = document.getElementById('constructionImg');
+    const audio = document.getElementById('constructionAudio');
 
-        <!-- Right Column -->
-        <div style="width: 66.666667%;">
-          <main>
-            
-            <!-- Interests Component -->
-            <div style="margin-bottom: 1rem; padding: 1rem;">
-              <h4>My Interests</h4>
-              <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; font-size: 0.875rem; margin-top: 1rem;">
-                <div>
-                  <h5 style="font-weight: bold; border-bottom: 1px solid rgb(48, 25, 52); margin-bottom: 0.25rem;">General</h5>
-                  <p>Mobile dev, React Native, C#, Linux (Arch + zen), Cyber-security, Chess, Racing games (Mazda RX-7 FD), Retro/Vaporwave design.</p>
-                </div>
-                <div>
-                  <h5 style="font-weight: bold; border-bottom: 1px solid rgb(48, 25, 52); margin-bottom: 0.25rem;">Music</h5>
-                  <p>Synthwave, Vaporwave, Retrowave. Energetic beats for late-night coding.</p>
-                </div>
-                <div>
-                  <h5 style="font-weight: bold; border-bottom: 1px solid rgb(48, 25, 52); margin-bottom: 0.25rem;">Movies & Series</h5>
-                  <p>Sci-Fi classics, cyberpunk aesthetics, and mind-bending thrillers.</p>
-                </div>
-                <div>
-                  <h5 style="font-weight: bold; border-bottom: 1px solid rgb(48, 25, 52); margin-bottom: 0.25rem;">Books</h5>
-                  <p>Technology, open-source philosophy, and creative coding references.</p>
-                </div>
-              </div>
-            </div>
+    img.addEventListener('mouseenter', () => {
+      audio.play().catch(err => console.log('Ses oynatılamadı:', err));
+    });
 
-            <!-- Blurbs Component -->
-            <div class="blurbs" style="padding: 1rem; margin-top: 1rem;">
-              <div class="inner">
-                <div style="margin-bottom: 1rem;">
-                  <h4 style="border-bottom: 1px solid rgb(48, 25, 52); margin-bottom: 0.5rem;">About me:</h4>
-                  <p>
-                    Hello! I’m Yakup Ekrem Özcan, a computer engineering graduate from Turkey with a strong passion for mobile app development—especially using React Native. I enjoy exploring operating systems like Arch Linux and fine-tuning my laptop for performance and security.
-                    I love combining tech with art: vaporwave and retro themes inspire many of my personal projects, including my experimental “Diagonal Feed UI” concept. Outside of coding, you’ll find me playing chess (also a certified referee and coach) or drifting through racing games.
-                  </p>
-                </div>
-                <div>
-                  <h4 style="border-bottom: 1px solid rgb(48, 25, 52); margin-bottom: 0.5rem;">Projects & Ideas:</h4>
-                  <p>
-                    • rvoidex7 personal brand and portfolio site<br/>
-                    • Diagonal Feed UI: a dynamic scrolling concept where content flows from bottom-left to top-right<br/>
-                    • Multi-factor, privacy-friendly login methods for mobile apps.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- BlogPreview Component -->
-            <div class="blog-preview">
-              <h4>My Latest Blog Entry</h4>
-              <div style="margin-top: 0.5rem; font-size: 0.875rem;">
-                <div style="border-bottom: 1px dashed #666; padding-bottom: 0.5rem; margin-bottom: 0.5rem;">
-                    <a href="#">Diagonal Feed UI Concept</a>
-                    <span style="color: #999; margin-left: 0.5rem;">(Date: 01/01/2024)</span>
-                </div>
-                 <div style="border-bottom: 1px dashed #666; padding-bottom: 0.5rem; margin-bottom: 0.5rem;">
-                    <a href="#">My New Retro Portfolio Site!</a>
-                    <span style="color: #999; margin-left: 0.5rem;">(Date: 12/25/2023)</span>
-                </div>
-                <div>
-                    <a href="#">Tuning Arch Linux for Dev</a>
-                    <span style="color: #999; margin-left: 0.5rem;">(Date: 12/15/2023)</span>
-                </div>
-              </div>
-               <div style="text-align: right; margin-top: 0.75rem; font-size: 0.875rem;">
-                <a href="#">[View All Blog Entries]</a>
-              </div>
-            </div>
-
-            <!-- FriendSpace Component -->
-            <div class="friends-space" style="margin-top: 1rem;">
-              <div class="heading" style="padding: 0.5rem; border: ridge 3px black; text-align: center; box-shadow: 0px 2px 2px white;">
-                <h4>My Friend Space</h4>
-              </div>
-              <div class="inner">
-                <p style="margin-bottom: 0.75rem;">
-                  I have <strong>8</strong> Friends.
-                </p>
-                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;">
-                  <div class="person">
-                    <a href="#"><img src="https://picsum.photos/seed/101/80/80" alt="Friend 1" /></a>
-                    <p>Friend 1</p>
-                  </div>
-                  <div class="person">
-                    <a href="#"><img src="https://picsum.photos/seed/102/80/80" alt="Friend 2" /></a>
-                    <p>Friend 2</p>
-                  </div>
-                  <div class="person">
-                    <a href="#"><img src="https://picsum.photos/seed/103/80/80" alt="Friend 3" /></a>
-                    <p>Friend 3</p>
-                  </div>
-                  <div class="person">
-                    <a href="#"><img src="https://picsum.photos/seed/104/80/80" alt="Friend 4" /></a>
-                    <p>Friend 4</p>
-                  </div>
-                  <div class="person">
-                    <a href="#"><img src="https://picsum.photos/seed/105/80/80" alt="Friend 5" /></a>
-                    <p>Friend 5</p>
-                  </div>
-                  <div class="person">
-                    <a href="#"><img src="https://picsum.photos/seed/106/80/80" alt="Friend 6" /></a>
-                    <p>Friend 6</p>
-                  </div>
-                  <div class="person">
-                    <a href="#"><img src="https://picsum.photos/seed/107/80/80" alt="Friend 7" /></a>
-                    <p>Friend 7</p>
-                  </div>
-                  <div class="person">
-                    <a href="#"><img src="https://picsum.photos/seed/108/80/80" alt="Friend 8" /></a>
-                    <p>Friend 8</p>
-                  </div>
-                </div>
-                <div style="text-align: right; margin-top: 0.5rem; font-size: 0.875rem;">
-                  <a href="#">View All of My Friends</a>
-                </div>
-              </div>
-            </div>
-
-          </main>
-        </div>
-      </div>
-
-    </div>
-  <script type="module" src="/index.tsx"></script>
+    img.addEventListener('mouseleave', () => {
+      audio.pause();
+      audio.currentTime = 0; // Baştan başlatır
+    });
+  </script>
 </body>
 </html>
